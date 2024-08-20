@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="img/pinterest logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest</title>
+    <style>
+        body {
+            margin: 0%;
+        }
+
+        #logo {
+            height: 5vh;
+        }
+
+        nav {
+            display: flex;
+            height: 8vh;
+            width: 100%;
+            padding-top: 1%;
+            position: fixed;
+            background-color: white;
+            z-index: +1;
+        }
+
+        h1 {
+            color: #CC0000;
+            margin-top: 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        ul {
+            display: flex;
+            flex-grow: 1;
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        #e {
+            color: #CC0000;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        #w:hover {
+            color: #CC0000;
+            cursor: pointer;
+        }
+
+        #l {
+            background-color: #F1F1F1;
+            width: 70px;
+            height: 6.5vh;
+            font-weight: bold;
+            border: none;
+            border-radius: 2rem;
+        }
+
+        #s {
+            margin-right: 20px;
+            margin-left: 10px;
+            width: 75px;
+            height: 6.5vh;
+            font-weight: bold;
+            background-color: #E60023;
+            color: white;
+            border: none;
+            border-radius: 2rem;
+        }
+
+        #l:hover {
+            background-color: #E1E1E1;
+            color: black;
+            cursor: pointer;
+        }
+
+        #s:hover {
+            background-color: #CC0000;
+            color: white;
+            cursor: pointer;
+        }
+
+        #search {
+            background-image: url(img/icons8-search-24.png);
+            background-repeat: no-repeat;
+            background-position: 10px;
+            padding-left: 40px;
+            background-color: #F1F1F1;
+            border: none;
+            outline-color: #7FC1FF;
+            flex-grow: 8;
+            border-radius: 2rem;
+            height: 6vh;
+            margin-right: 60px;
+            margin-top: px;
+        }
+
+        #search:hover {
+            background-color: #E1E1E1;
+            cursor: pointer;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 25vh;
+            padding-top: 10px;
+        }
+
+        .img1 {
+            border-radius: 1rem;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            box-shadow: inset 5px 18px 100px -30px #000000;
+            background-image: url(img/beautiful\ senery.webp);
+            background-repeat: no-repeat;
+            width: 240px;
+            margin-top: 70px;
+            height: 40vh;
+        }
+
+        .img2 {
+            border-radius: 1rem;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            box-shadow: inset 5px 18px 100px -30px #000000;
+            background-image: url(img/dp.jpg);
+            background-repeat: no-repeat;
+            width: 240px;
+            margin-top: 70px;
+            height: 56.5vh;
+        }
+
+        .img3 {
+            border-radius: 1rem;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            box-shadow: inset 5px 18px 100px -30px #000000;
+            background-image: url(img/dp2.jpg);
+            background-repeat: no-repeat;
+            width: 240px;
+            margin-top: 70px;
+            height: 49vh;
+        }
+
+        .img4 {
+            border-radius: 1rem;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            background-image: url(img/dp34.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 240px;
+            margin-top: 70px;
+            height: 30vh;
+        }
+
+        .img5 {
+            border-radius: 1rem;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            box-shadow: inset 5px 18px 100px -30px #000000;
+            background-image: url(img/dp8.jpg);
+            background-repeat: no-repeat;
+            width: 240px;
+            margin-top: 70px;
+            height: 46vh;
+        }
+
+        .img6 {
+            position: absolute;
+            top: 177px;
+            border-radius: 1rem;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            box-shadow: inset 5px 18px 100px -30px #000000;
+            background-image: url(img/lake.jpg);
+            background-repeat: no-repeat;
+            width: 240px;
+            height: 54.5vh;
+        }
+
+        .img7 {
+            position: absolute;
+            top: 294px;
+            border-radius: 1rem;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            box-shadow: inset 5px 18px 100px -30px #000000;
+            background-image: url(img/g.jpg);
+            background-repeat: no-repeat;
+            width: 240px;
+            height: 38.5vh;
+        }
+
+        .img8 {
+            position: absolute;
+            top: 239px;
+            border-radius: 1rem;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            box-shadow: inset 5px 18px 100px -30px #000000;
+            background-image: url(img/building2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 240px;
+            height: 46.5vh;
+        }
+
+        .img9 {
+            position: absolute;
+            top: 375px;
+            border-radius: 1rem;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            box-shadow: inset 5px 18px 100px -30px #000000;
+            background-image: url(img/sea.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 240px;
+            height: 27.5vh;
+        }
+
+        .img10 {
+            position: absolute;
+            top: 102px;
+            right: 250px;
+            border-radius: 1rem;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            box-shadow: inset 5px 18px 100px -30px #000000;
+            background-image: url(img/dp4.webp);
+            background-repeat: no-repeat;
+            width: 240px;
+            height: 37vh;
+        }
+
+        .img11 {
+            position: absolute;
+            bottom: 22px;
+            left: 1013px;
+            border-radius: 1rem;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            box-shadow: inset 5px 18px 100px -30px #000000;
+            background-image: url(img/g1.jpg);
+            background-repeat: no-repeat;
+            width: 240px;
+            height: 49.5vh;
+            margin-top: 59px;
+        }
+
+
+        #h41 {
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 100px;
+            left: 90px;
+            font-size: 25px;
+            display: none;
+        }
+
+        #h42 {
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 150px;
+            left: 90px;
+            font-size: 25px;
+            display: none;
+        }
+
+        #h43 {
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 120px;
+            left: 90px;
+            font-size: 25px;
+            display: none;
+        }
+
+        #h44 {
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 60px;
+            left: 90px;
+            font-size: 25px;
+            display: none;
+        }
+
+        #h45 {
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 120px;
+            left: 90px;
+            font-size: 25px;
+            display: none;
+        }
+
+        #h46 {
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 150px;
+            left: 90px;
+            font-size: 25px;
+            display: none;
+        }
+
+        #h47 {
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 100px;
+            left: 90px;
+            font-size: 25px;
+            display: none;
+        }
+
+        #h48 {
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 130px;
+            left: 90px;
+            font-size: 25px;
+            display: none;
+        }
+
+        #h49 {
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 50px;
+            left: 90px;
+            font-size: 25px;
+            display: none;
+        }
+
+        #h410 {
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 80px;
+            left: 90px;
+            font-size: 25px;
+            display: none;
+        }
+
+        #h411 {
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 130px;
+            left: 90px;
+            font-size: 25px;
+            display: none;
+        }
+
+
+        .icon1 {
+            position: absolute;
+            top: 230px;
+            left: 190px;
+            display: none;
+            background-image: url(img/icons8-ellipsis-50.png);
+            background-position: 5px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .icon2 {
+            position: absolute;
+            top: 350px;
+            left: 190px;
+            display: none;
+            background-image: url(img/icons8-ellipsis-50.png);
+            background-position: 5px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .icon3 {
+            position: absolute;
+            top: 290px;
+            left: 190px;
+            display: none;
+            background-image: url(img/icons8-ellipsis-50.png);
+            background-position: 5px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .icon4 {
+            position: absolute;
+            top: 160px;
+            left: 190px;
+            display: none;
+            background-image: url(img/icons8-ellipsis-50.png);
+            background-position: 5px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .icon5 {
+            position: absolute;
+            top: 280px;
+            left: 190px;
+            display: none;
+            background-image: url(img/icons8-ellipsis-50.png);
+            background-position: 5px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .icon6 {
+            position: absolute;
+            top: 335px;
+            left: 190px;
+            display: none;
+            background-image: url(img/icons8-ellipsis-50.png);
+            background-position: 5px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .icon7 {
+            position: absolute;
+            top: 220px;
+            left: 190px;
+            display: none;
+            background-image: url(img/icons8-ellipsis-50.png);
+            background-position: 5px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .icon8 {
+            position: absolute;
+            top: 280px;
+            left: 190px;
+            display: none;
+            background-image: url(img/icons8-ellipsis-50.png);
+            background-position: 5px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .icon9 {
+            position: absolute;
+            top: 150px;
+            left: 190px;
+            display: none;
+            background-image: url(img/icons8-ellipsis-50.png);
+            background-position: 5px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .icon10 {
+            position: absolute;
+            top: 210px;
+            left: 190px;
+            display: none;
+            background-image: url(img/icons8-ellipsis-50.png);
+            background-position: 5px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .icon11 {
+            position: absolute;
+            top: 300px;
+            left: 190px;
+            display: none;
+            background-image: url(img/icons8-ellipsis-50.png);
+            background-position: 5px;
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        #icon1 {
+            display: none;
+            position: absolute;
+            top: 230px;
+            left: 140px;
+            background-image: url(img/icons8-upload-48.png);
+            background-position: 5px;
+            background-image: url(img/icons8-upload-48.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        #icon2 {
+            display: none;
+            position: absolute;
+            top: 350px;
+            left: 140px;
+            background-image: url(img/icons8-upload-48.png);
+            background-position: 5px;
+            background-image: url(img/icons8-upload-48.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        #icon3 {
+            display: none;
+            position: absolute;
+            top: 290px;
+            left: 140px;
+            background-image: url(img/icons8-upload-48.png);
+            background-position: 5px;
+            background-image: url(img/icons8-upload-48.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        #icon4 {
+            display: none;
+            position: absolute;
+            top: 160px;
+            left: 140px;
+            background-image: url(img/icons8-upload-48.png);
+            background-position: 5px;
+            background-image: url(img/icons8-upload-48.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        #icon5 {
+            display: none;
+            position: absolute;
+            top: 280px;
+            left: 140px;
+            background-image: url(img/icons8-upload-48.png);
+            background-position: 5px;
+            background-image: url(img/icons8-upload-48.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        #icon6 {
+            display: none;
+            position: absolute;
+            top: 335px;
+            left: 140px;
+            background-image: url(img/icons8-upload-48.png);
+            background-position: 5px;
+            background-image: url(img/icons8-upload-48.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        #icon7 {
+            display: none;
+            position: absolute;
+            top: 220px;
+            left: 140px;
+            background-image: url(img/icons8-upload-48.png);
+            background-position: 5px;
+            background-image: url(img/icons8-upload-48.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        #icon8 {
+            display: none;
+            position: absolute;
+            top: 280px;
+            left: 140px;
+            background-image: url(img/icons8-upload-48.png);
+            background-position: 5px;
+            background-image: url(img/icons8-upload-48.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        #icon9 {
+            display: none;
+            position: absolute;
+            top: 150px;
+            left: 140px;
+            background-image: url(img/icons8-upload-48.png);
+            background-position: 5px;
+            background-image: url(img/icons8-upload-48.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        #icon10 {
+            display: none;
+            position: absolute;
+            top: 210px;
+            left: 140px;
+            background-image: url(img/icons8-upload-48.png);
+            background-position: 5px;
+            background-image: url(img/icons8-upload-48.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        #icon11 {
+            display: none;
+            position: absolute;
+            top: 300px;
+            left: 140px;
+            background-image: url(img/icons8-upload-48.png);
+            background-position: 5px;
+            background-image: url(img/icons8-upload-48.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .img1:hover #h41 {
+            display: block;
+        }
+
+        .img2:hover #h42 {
+            display: block;
+        }
+
+        .img3:hover #h43 {
+            display: block;
+        }
+
+        .img4:hover #h44 {
+            display: block;
+        }
+
+        .img5:hover #h45 {
+            display: block;
+        }
+
+        .img1:hover .icon1 {
+            display: block;
+        }
+
+        .img1:hover #icon1 {
+            display: block;
+        }
+
+        .img2:hover .icon2 {
+            display: block;
+        }
+
+        .img2:hover #icon2 {
+            display: block;
+        }
+
+        .img3:hover .icon3 {
+            display: block;
+        }
+
+        .img3:hover #icon3 {
+            display: block;
+        }
+
+        .img4:hover .icon4 {
+            display: block;
+        }
+
+        .img4:hover #icon4 {
+            display: block;
+        }
+
+        .img5:hover .icon5 {
+            display: block;
+        }
+
+        .img5:hover #icon5 {
+            display: block;
+        }
+
+
+        .img6:hover #h46 {
+            display: block;
+        }
+
+        .img7:hover #h47 {
+            display: block;
+        }
+
+        .img8:hover #h48 {
+            display: block;
+        }
+
+        .img9:hover #h49 {
+            display: block;
+        }
+
+        .img10:hover #h410 {
+            display: block;
+        }
+
+        .img11:hover #h411 {
+            display: block;
+        }
+
+        .img6:hover .icon6 {
+            display: block;
+        }
+
+        .img6:hover #icon6 {
+            display: block;
+        }
+
+        .img7:hover .icon7 {
+            display: block;
+        }
+
+        .img7:hover #icon7 {
+            display: block;
+        }
+
+        .img8:hover .icon8 {
+            display: block;
+        }
+
+        .img8:hover #icon8 {
+            display: block;
+        }
+
+        .img9:hover .icon9 {
+            display: block;
+        }
+
+        .img9:hover #icon9 {
+            display: block;
+        }
+
+        .img10:hover .icon10 {
+            display: block;
+        }
+
+        .img10:hover #icon10 {
+            display: block;
+        }
+
+        .img11:hover .icon11 {
+            display: block;
+        }
+
+        .img11:hover #icon11 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="img/pinterest logo.png" id="logo">
+        <h1>Pinterest</h1>
+        <ul>
+            <li id="w">Watch</li>
+            <li id="e">Explore</li>
+        </ul>
+        <input id="search" type="search" placeholder="Search for easy dinners,design, etc.">
+        <button id="l">Log in</button>
+        <button id="s">Sign up</button>
+    </nav>
+
+    <div class="main">
+
+        <div class="img1">
+            <h4 id="h41">Open</h4>
+            <div class="icon1"></div>
+            <div id="icon1"></div>
+        </div>
+
+        <div class="img2">
+            <h4 id="h42">Open</h4>
+            <div class="icon2"></div>
+            <div id="icon2"></div>
+        </div>
+
+        <div class="img3">
+            <h4 id="h43">Open</h4>
+            <div class="icon3"></div>
+            <div id="icon3"></div>
+        </div>
+
+        <div class="img4">
+            <h4 id="h44">Open</h4>
+            <div class="icon4"></div>
+            <div id="icon4"></div>
+        </div>
+
+        <div class="img5">
+            <h4 id="h45">Open</h4>
+            <div class="icon5"></div>
+            <div id="icon5"></div>
+        </div>
+
+    </div>
+
+
+    <div class="main">
+
+        <div class="img6">
+            <h4 id="h46">Open</h4>
+            <div class="icon6"></div>
+            <div id="icon6"></div>
+        </div>
+
+        <div class="img7">
+            <h4 id="h47">Open</h4>
+            <div class="icon7"></div>
+            <div id="icon7"></div>
+        </div>
+
+        <div class="img8">
+            <h4 id="h48">Open</h4>
+            <div class="icon8"></div>
+            <div id="icon8"></div>
+        </div>
+
+        <div class="img9">
+            <h4 id="h49">Open</h4>
+            <div class="icon9"></div>
+            <div id="icon9"></div>
+        </div>
+
+        <div class="img10">
+            <h4 id="h410">Open</h4>
+            <div class="icon10"></div>
+            <div id="icon10"></div>
+        </div>
+
+    </div>
+
+
+    <div class="img11">
+        <h4 id="h411">Open</h4>
+        <div class="icon11"></div>
+        <div id="icon11"></div>
+    </div>
+
+</body>
+
+</html>
